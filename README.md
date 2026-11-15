@@ -1,27 +1,27 @@
-# ViewportStroke
+# viewportStroke
 
 A `UIStroke` for 3D models in `ViewportFrame`s. It draws an even outline round a model, the same
 thickness on every screen, in a flat color or a gradient.
 
 Roblox's `Highlight` doesn't draw inside ViewportFrames, and a viewport can't be read back into an
-`EditableImage`, so ViewportStroke builds the outline out of geometry instead. It's one plain
+`EditableImage`, so viewportStroke builds the outline out of geometry instead. It's one plain
 `--!strict` Luau module with no dependencies.
 
 > **Beta.** The API may still change before 1.0.0. Bug reports and ideas are welcome in Issues.
 
 ## Install
 
-**Studio:** download `ViewportStroke.rbxm` from the
-[latest release](https://github.com/walroo/ViewportStroke/releases) and drag it into Studio
+**Studio:** download `viewportStroke.rbxm` from the
+[latest release](https://github.com/walroo/viewportStroke/releases) and drag it into Studio
 (for example into `ReplicatedStorage`).
 
-**Rojo:** copy `src/init.luau` into your project as `ViewportStroke.luau`, or add this repo as a
+**Rojo:** copy `src/init.luau` into your project as `viewportStroke.luau`, or add this repo as a
 git submodule and point a project entry at its `src` folder.
 
 ## Usage
 
 ```lua
-local ViewportStroke = require(game.ReplicatedStorage.ViewportStroke)
+local ViewportStroke = require(game.ReplicatedStorage.viewportStroke)
 
 -- the model is already in the viewport, and the viewport has a CurrentCamera
 local stroke = ViewportStroke.new(viewportFrame, model)
